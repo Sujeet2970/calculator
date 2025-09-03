@@ -3,7 +3,7 @@ name: Deploy Calculator App to Kubernetes
 on:
   push:
     branches:
-      - main   # triggers on push to main
+      - master   # triggers on push to main
 
 jobs:
   build-and-deploy:
