@@ -56,7 +56,7 @@ jobs:
       # 8️⃣ Configure Kubeconfig
       - name: Configure Kubeconfig
         run: |
-          echo "${{ secrets.KUBECONFIG_DATA }}" > kubeconfig
+          echo "${{ secrets.KUBECONFIG_DATA }}" | base64 -d > kubeconfig
           export KUBECONFIG=$(pwd)/kubeconfig
       # 9️⃣ Debug Kubernetes Setup
       - name: Debug Kubernetes Setup
