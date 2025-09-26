@@ -1,4 +1,4 @@
-name: Deploy Calculator App to Kubernetes
+name: Deploy Calculator Application to Kubernetes
 
 on:
   push:
