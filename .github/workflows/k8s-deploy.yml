@@ -58,6 +58,11 @@ jobs:
         run: |
           echo "${{ secrets.KUBECONFIG_DATA }}" > kubeconfig
           export KUBECONFIG=$(pwd)/kubeconfig
+      # 9️⃣ Debug Kubernetes Setup
+      - name: Debug Kubernetes Setup
+        run: |
+          kubectl config view
+          kubectl cluster-info
 
       # 9️⃣ Update Kubernetes Deployment
       - name: Update Kubernetes Deployment
